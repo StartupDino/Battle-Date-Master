@@ -8,6 +8,9 @@
 
 import UIKit
 
+//TODO: update the splash sceen sizes in illustrator
+
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
