@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,11 +28,49 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBo-LO-YFC">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="125"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTf-Zr-8lz">
+                                                <rect key="frame" x="303" y="0.0" width="40" height="125"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="I4f-s3-kNR"/>
+                                                </constraints>
+                                                <state key="normal" image="down_full"/>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="lTf-Zr-8lz" secondAttribute="bottom" id="4mL-es-ZaQ"/>
+                                            <constraint firstItem="lTf-Zr-8lz" firstAttribute="top" secondItem="IBo-LO-YFC" secondAttribute="top" id="UEs-Cr-Aq5"/>
+                                            <constraint firstAttribute="trailing" secondItem="lTf-Zr-8lz" secondAttribute="trailing" id="lXo-aP-DcR"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c83-he-nmW">
                                         <rect key="frame" x="0.0" y="135" width="343" height="125.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgO-f1-kNK">
+                                                <rect key="frame" x="303" y="0.0" width="40" height="62.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="sgW-a8-PAh"/>
+                                                </constraints>
+                                                <state key="normal" image="up_half"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HR7-ZQ-0sZ">
+                                                <rect key="frame" x="303" y="62.5" width="40" height="63"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="VnE-w5-BMs"/>
+                                                </constraints>
+                                                <state key="normal" image="down_half"/>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="HR7-ZQ-0sZ" firstAttribute="height" secondItem="c83-he-nmW" secondAttribute="height" multiplier="0.5" id="9eK-Ei-lxI"/>
+                                            <constraint firstItem="OgO-f1-kNK" firstAttribute="height" secondItem="c83-he-nmW" secondAttribute="height" multiplier="0.5" id="Jle-N6-DTh"/>
+                                            <constraint firstAttribute="trailing" secondItem="OgO-f1-kNK" secondAttribute="trailing" id="RNb-a0-rKe"/>
+                                            <constraint firstAttribute="bottom" secondItem="HR7-ZQ-0sZ" secondAttribute="bottom" id="eqz-O0-NT3"/>
+                                            <constraint firstItem="OgO-f1-kNK" firstAttribute="top" secondItem="c83-he-nmW" secondAttribute="top" id="szq-IL-Upf"/>
+                                            <constraint firstAttribute="trailing" secondItem="HR7-ZQ-0sZ" secondAttribute="trailing" id="tQa-Dk-49l"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oX8-AH-zXB">
                                         <rect key="frame" x="0.0" y="270.5" width="343" height="125"/>
@@ -80,10 +119,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="-66.400000000000006" y="21.139430284857571"/>
         </scene>
     </scenes>
     <resources>
+        <image name="down_full" width="158" height="457"/>
+        <image name="down_half" width="158" height="229"/>
         <image name="next_round_success" width="558" height="142"/>
+        <image name="up_half" width="158" height="229"/>
     </resources>
 </document>
