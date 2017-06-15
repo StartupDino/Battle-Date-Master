@@ -12,6 +12,14 @@ import UIKit
 
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var labelOne: UILabel!
+    @IBOutlet weak var labelTwo: UILabel!
+    @IBOutlet weak var labelThree: UILabel!
+    @IBOutlet weak var labelFour: UILabel!
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +31,22 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // sets up an initial welcome screen!
+    
+    func showWelcomeScreen() {
+        labelOne.isHidden = true
+        labelTwo.isHidden = true
+        labelThree.isHidden = true
+        labelFour.isHidden = true
+
+    }
+    
+    
+    // Starts a round of 6
+    
+    func startRound() {
+        
+    }
 
 }
 
