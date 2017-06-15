@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        showWelcomeScreen()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +38,14 @@ class ViewController: UIViewController {
     // sets up an initial welcome screen!
     
     func showWelcomeScreen() {
+        label1.text = "Ready to"
+        label2.text = "put these"
+        label3.text = "historic battles"
+        label4.text = "in order??"
+        nextRoundButton.setTitle("Start the Round", for: UIControlState.normal)
+        nextRoundButton.setImage(nil, for: UIControlState.normal)
+        timerLabel.isHidden = true
+        shakeButton.isHidden = true
 
 
     }

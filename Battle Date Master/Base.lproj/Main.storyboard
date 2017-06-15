@@ -205,6 +205,7 @@
                         <outlet property="label4" destination="lsn-J5-Cvl" id="XRk-VM-6Ng"/>
                         <outlet property="nextRoundButton" destination="4Jv-aS-nMu" id="hno-9Q-2WH"/>
                         <outlet property="shakeButton" destination="oWH-gI-WXp" id="sYe-bT-L6v"/>
+                        <outlet property="timerLabel" destination="Zbg-ai-xJb" id="juB-Hh-RWm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
