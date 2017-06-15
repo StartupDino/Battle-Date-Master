@@ -35,5 +35,4 @@ var allBattles: [BattleDate] = [
     BattleDate(description: "Victory of the Americas at Saratoga", year: 1777),
     BattleDate(description: "Battle of Valmy", year: 1792),
     BattleDate(description: "Battle of Waterloo", year: 1815)
-    
 ]
