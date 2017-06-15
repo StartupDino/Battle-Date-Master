@@ -13,6 +13,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var label3: UILabel!
+    @IBOutlet weak var label4: UILabel!
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var nextRoundButton: UIButton!
+    @IBOutlet weak var shakeButton: UIButton!
+
+
     
 
     override func viewDidLoad() {
