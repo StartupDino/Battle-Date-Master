@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +21,43 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8Fv-n0-3yM">
+                                <rect key="frame" x="16" y="28" width="343" height="530.5"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWH-gI-WXp">
+                                <rect key="frame" x="46" y="617" width="283" height="30"/>
+                                <state key="normal" title="Shake Button and Message"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Jv-aS-nMu">
+                                <rect key="frame" x="102" y="567" width="171" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="171" id="WQX-As-sLQ"/>
+                                    <constraint firstAttribute="height" constant="43" id="XK9-hY-clp"/>
+                                </constraints>
+                                <state key="normal" image="next_round_success"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbg-ai-xJb">
+                                <rect key="frame" x="165.5" y="566.5" width="44" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.29411764709999999" green="0.30588235289999999" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4Jv-aS-nMu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2RD-0j-HXt"/>
+                            <constraint firstItem="oWH-gI-WXp" firstAttribute="top" secondItem="Zbg-ai-xJb" secondAttribute="bottom" constant="30" id="2bX-T7-uAW"/>
+                            <constraint firstItem="8Fv-n0-3yM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Fvb-iD-ukD"/>
+                            <constraint firstItem="8Fv-n0-3yM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RpO-yC-gD6"/>
+                            <constraint firstItem="Zbg-ai-xJb" firstAttribute="top" secondItem="8Fv-n0-3yM" secondAttribute="bottom" constant="8" id="YMf-yp-SH2"/>
+                            <constraint firstItem="4Jv-aS-nMu" firstAttribute="top" secondItem="8Fv-n0-3yM" secondAttribute="bottom" constant="8.5" id="aD8-n9-O7b"/>
+                            <constraint firstItem="oWH-gI-WXp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="bur-Io-iQr"/>
+                            <constraint firstItem="8Fv-n0-3yM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="c70-RB-OJB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oWH-gI-WXp" secondAttribute="trailing" constant="30" id="jhx-ce-KwJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oWH-gI-WXp" secondAttribute="bottom" constant="20" id="vBN-3S-Iwi"/>
+                            <constraint firstItem="Zbg-ai-xJb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vyS-RS-VS9"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -28,4 +65,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="next_round_success" width="558" height="142"/>
+    </resources>
 </document>
