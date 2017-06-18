@@ -9,6 +9,8 @@
 import UIKit
 
 //TODO: update the splash sceen sizes in illustrator
+//TODO: 4 random battle generation is done. Time to update the label texts for "start round", and write button action to move the things around.
+
 
 
 class ViewController: UIViewController {
@@ -51,10 +53,10 @@ class ViewController: UIViewController {
     }
     
     
-    // Starts a round of 6
+    // Starts a game of 6 rounds
     
-    func startRound() {
-        
+    @IBAction func startRound() {
+        chooseBattlesForRound()
     }
 
 }

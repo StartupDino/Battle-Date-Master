@@ -58,11 +58,11 @@
 			children = (
 				476DD2F01EF1BD5B00151996 /* AppDelegate.swift */,
 				476DD2F21EF1BD5B00151996 /* ViewController.swift */,
+				47613F171EF1CC3D004A252A /* BattleDates.swift */,
 				476DD2F41EF1BD5B00151996 /* Main.storyboard */,
 				476DD2F71EF1BD5B00151996 /* Assets.xcassets */,
 				476DD2F91EF1BD5B00151996 /* LaunchScreen.storyboard */,
 				476DD2FC1EF1BD5B00151996 /* Info.plist */,
-				47613F171EF1CC3D004A252A /* BattleDates.swift */,
 			);
 			path = "Battle Date Master";
 			sourceTree = "<group>";
