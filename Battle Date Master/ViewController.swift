@@ -48,15 +48,20 @@ class ViewController: UIViewController {
         nextRoundButton.setImage(nil, for: UIControlState.normal)
         timerLabel.isHidden = true
         shakeButton.isHidden = true
-
-
     }
-    
     
     // Starts a game of 6 rounds
     
     @IBAction func startRound() {
         chooseBattlesForRound()
+        
+        label1.text = roundBattles[0].description
+        label2.text = roundBattles[1].description
+        label3.text = roundBattles[2].description
+        label4.text = roundBattles[3].description
+        
+        nextRoundButton.isHidden = true
+        timerLabel.isHidden = false
     }
 
 }
