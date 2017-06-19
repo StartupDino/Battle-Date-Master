@@ -22,8 +22,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var nextRoundButton: UIButton!
     @IBOutlet weak var shakeButton: UIButton!
-
-
+    
+    let successImage = #imageLiteral(resourceName: "next_round_success")
+    let failImage = #imageLiteral(resourceName: "next_round_fail")
     
 
     override func viewDidLoad() {
@@ -45,7 +46,6 @@ class ViewController: UIViewController {
         label3.text = "historic battles"
         label4.text = "in order??"
         nextRoundButton.setTitle("Start the Round", for: UIControlState.normal)
-        nextRoundButton.setImage(nil, for: UIControlState.normal)
         timerLabel.isHidden = true
         shakeButton.isHidden = true
     }
@@ -81,6 +81,8 @@ class ViewController: UIViewController {
             shakeButton.setTitle("maybe!!", for: UIControlState.normal) //TOFIX:
             resetBattlesForNextRound()
             print(roundBattles)
+            nextRoundButton.isHidden = false
+            nextRoundButton.setImage(successImage, for: UIControlState.normal)
         }
     }
 
