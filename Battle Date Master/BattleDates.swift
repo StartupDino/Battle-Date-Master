@@ -90,7 +90,7 @@ func chooseBattlesForRound() {
     var i = 0
     
     while i < roundBattlesIndex.count {
-        roundBattles.append(allBattles[battleIndex[i]])
+        roundBattles.append(allBattles[roundBattlesIndex[i]])
         i += 1
     }
 }
