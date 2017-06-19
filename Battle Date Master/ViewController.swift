@@ -8,8 +8,6 @@
 
 import UIKit
 
-//TODO: update the splash sceen sizes in illustrator
-//TODO: 4 random battle generation is done. Time to update the label texts for "start round", and write button action to move the things around.
 //TODO: implement apple icon
 
 
@@ -184,7 +182,6 @@ class ViewController: UIViewController {
     }
     
     func checkAnswer() -> Bool {
-        //TODO: add logic, probably just if statement?
         if battle1.year <= battle2.year && battle2.year <= battle3.year && battle3.year <= battle4.year {
             return true
         } else {
