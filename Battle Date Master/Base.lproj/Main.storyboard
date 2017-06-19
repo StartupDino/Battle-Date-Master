@@ -35,6 +35,9 @@
                                                     <constraint firstAttribute="width" constant="40" id="I4f-s3-kNR"/>
                                                 </constraints>
                                                 <state key="normal" image="down_full"/>
+                                                <connections>
+                                                    <action selector="firstBattleDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a5f-JA-Qea"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpi-fW-AY8">
                                                 <rect key="frame" x="8" y="8" width="287" height="109"/>
@@ -63,6 +66,9 @@
                                                     <constraint firstAttribute="width" constant="40" id="sgW-a8-PAh"/>
                                                 </constraints>
                                                 <state key="normal" image="up_half"/>
+                                                <connections>
+                                                    <action selector="secondBattleUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uSu-dq-Gwf"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HR7-ZQ-0sZ">
                                                 <rect key="frame" x="303" y="62.5" width="40" height="62.5"/>
@@ -70,6 +76,9 @@
                                                     <constraint firstAttribute="width" constant="40" id="VnE-w5-BMs"/>
                                                 </constraints>
                                                 <state key="normal" image="down_half"/>
+                                                <connections>
+                                                    <action selector="secondBattleDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S0D-F6-fvf"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLX-LW-W06">
                                                 <rect key="frame" x="8" y="8" width="287" height="109"/>
@@ -101,6 +110,9 @@
                                                     <constraint firstAttribute="width" constant="40" id="ySe-MI-o1W"/>
                                                 </constraints>
                                                 <state key="normal" image="up_half"/>
+                                                <connections>
+                                                    <action selector="thirdBattleUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YJb-jb-cKs"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="up9-tP-GuZ">
                                                 <rect key="frame" x="303" y="62" width="40" height="63"/>
@@ -108,6 +120,9 @@
                                                     <constraint firstAttribute="width" constant="40" id="4MO-L5-97N"/>
                                                 </constraints>
                                                 <state key="normal" image="down_half"/>
+                                                <connections>
+                                                    <action selector="thirdBattleDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ixm-uV-8W4"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKC-q2-TW9">
                                                 <rect key="frame" x="8" y="8" width="287" height="109"/>
@@ -139,6 +154,9 @@
                                                     <constraint firstAttribute="width" constant="40" id="zZT-Mj-8io"/>
                                                 </constraints>
                                                 <state key="normal" image="up_full"/>
+                                                <connections>
+                                                    <action selector="fourthBattleUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jAF-R3-Xj5"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsn-J5-Cvl">
                                                 <rect key="frame" x="8" y="8" width="287" height="109"/>

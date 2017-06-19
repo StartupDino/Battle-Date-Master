@@ -44,6 +44,62 @@ class ViewController: UIViewController {
         label4.text = battle4.description
     }
     
+    // adding functionality to up and down buttons
+    
+    @IBAction func firstBattleDown(_ sender: Any) {
+        let temp = battle1
+        battle1 = battle2
+        battle2 = temp
+        
+        label1.text = battle1.description
+        label2.text = battle2.description
+    }
+    
+    @IBAction func secondBattleUp(_ sender: Any) {
+        let temp = battle2
+        battle2 = battle1
+        battle1 = temp
+        
+        label1.text = battle1.description
+        label2.text = battle2.description
+    }
+    
+    @IBAction func secondBattleDown(_ sender: Any) {
+        let temp = battle2
+        battle2 = battle3
+        battle3 = temp
+        
+        label2.text = battle2.description
+        label3.text = battle3.description
+        
+    }
+    
+    @IBAction func thirdBattleUp(_ sender: Any) {
+        let temp = battle3
+        battle3 = battle2
+        battle2 = temp
+        
+        label2.text = battle2.description
+        label3.text = battle3.description
+    }
+
+    @IBAction func thirdBattleDown(_ sender: Any) {
+        let temp = battle3
+        battle3 = battle4
+        battle4 = temp
+        
+        label3.text = battle3.description
+        label4.text = battle4.description
+    }
+    
+    @IBAction func fourthBattleUp(_ sender: Any) {
+        let temp = battle4
+        battle4 = battle3
+        battle3 = temp
+        
+        label3.text = battle3.description
+        label4.text = battle4.description
+    }
     
 
     override func viewDidLoad() {
@@ -69,7 +125,7 @@ class ViewController: UIViewController {
         shakeButton.isHidden = true
     }
     
-    // Starts a game of 6 rounds
+    // Starts a new round with 4 battles, OR displays score screen
     
     @IBAction func startRound() {
         
