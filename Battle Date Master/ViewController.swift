@@ -69,8 +69,19 @@ class ViewController: UIViewController {
         print(battleIndex)
         print(roundBattles)
         
-//        nextRoundButton.isHidden = true
-//        timerLabel.isHidden = false
+        nextRoundButton.isHidden = true
+        timerLabel.isHidden = false
+        shakeButton.isHidden = false
+    }
+    
+    // shaking the device checks the battle order!
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            shakeButton.setTitle("maybe!!", for: UIControlState.normal) //TOFIX:
+            resetBattlesForNextRound()
+            print(roundBattles)
+        }
     }
 
 }
