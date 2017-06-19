@@ -37,6 +37,13 @@ class ViewController: UIViewController {
     var battle3 = currentBattles[2]
     var battle4 = currentBattles[3]
     
+    func setLabelText() {
+        label1.text = battle1.description
+        label2.text = battle2.description
+        label3.text = battle3.description
+        label4.text = battle4.description
+    }
+    
     
 
     override func viewDidLoad() {
@@ -66,12 +73,26 @@ class ViewController: UIViewController {
     
     @IBAction func startRound() {
         
-        label1.text = battle1.description
-        label2.text = battle2.description
-        label3.text = battle3.description
-        label4.text = battle4.description
+        if questionsAsked == 6 {
+            //TODO: add logic for score screen
+            questionsAsked = 0
+        } else {
+            currentBattles = chooseBattlesForRound()
+            battle1 = currentBattles[0]
+            battle2 = currentBattles[1]
+            battle3 = currentBattles[2]
+            battle4 = currentBattles[3]
+            
+            setLabelText()
+            print(currentBattles)
+
+
+            
+            
+            questionsAsked += 1
+        }
         
-        print(currentBattles)
+        
         
         nextRoundButton.isHidden = true
         timerLabel.isHidden = false
@@ -82,11 +103,8 @@ class ViewController: UIViewController {
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            shakeButton.setTitle("maybe!!", for: UIControlState.normal) //TOFIX:
-            resetBattlesForNextRound()
-            checkRounds()
+            shakeButton.setTitle("maybe!!", for: UIControlState.normal)
             
-            print(roundBattles)
             print(questionsAsked)
             nextRoundButton.isHidden = false
             nextRoundButton.setImage(successImage, for: UIControlState.normal)
@@ -95,15 +113,6 @@ class ViewController: UIViewController {
     
     func checkAnswer() {
         //TODO: add logic, probably just if statement?
-    }
-    
-    func checkRounds() {
-        if questionsAsked == 6 {
-            //TODO: add display score screens, etc.
-            questionsAsked = 0
-        } else {
-            questionsAsked += 1
-        }
     }
 
 }
