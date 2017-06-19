@@ -94,3 +94,14 @@ func chooseBattlesForRound() {
         i += 1
     }
 }
+
+func resetBattlesForNextRound() {
+    roundBattles = [BattleDate]()
+    battleIndex = Array(0...(allBattles.count - 1))
+    roundBattlesIndex = [Int]()
+}
+
+
+
+
+
