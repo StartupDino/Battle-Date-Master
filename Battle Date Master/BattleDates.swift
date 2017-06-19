@@ -74,6 +74,7 @@ var allBattles: [BattleDate] = [
 ]
 
 var roundBattles = [BattleDate]() // will contain the 4 random battles for each round
+var roundBattleYears = [Int]()
 var battleIndex = Array(0...(allBattles.count - 1))
 var roundBattlesIndex = [Int]()
 
@@ -91,8 +92,11 @@ func chooseBattlesForRound() {
     
     while i < roundBattlesIndex.count {
         roundBattles.append(allBattles[roundBattlesIndex[i]])
+        roundBattleYears.append(allBattles[roundBattlesIndex[i]].year)
         i += 1
     }
+    
+    roundBattleYears.sort()
 }
 
 func resetBattlesForNextRound() {

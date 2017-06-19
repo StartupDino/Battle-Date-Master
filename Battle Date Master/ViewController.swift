@@ -10,6 +10,8 @@ import UIKit
 
 //TODO: update the splash sceen sizes in illustrator
 //TODO: 4 random battle generation is done. Time to update the label texts for "start round", and write button action to move the things around.
+//TODO: implement apple icon
+
 
 
 
@@ -90,6 +92,10 @@ class ViewController: UIViewController {
             nextRoundButton.isHidden = false
             nextRoundButton.setImage(successImage, for: UIControlState.normal)
         }
+    }
+    
+    func checkAnswer() {
+        //TODO: add logic, probably just if statement?
     }
     
     func checkRounds() {
