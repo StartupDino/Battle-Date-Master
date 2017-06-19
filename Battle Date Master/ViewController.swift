@@ -8,9 +8,6 @@
 
 import UIKit
 
-//TODO: implement apple icon
-
-
 var currentBattles = chooseBattlesForRound()
 
 
