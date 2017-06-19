@@ -145,7 +145,7 @@ class ViewController: UIViewController {
             print(currentBattles)
 
 
-            
+            startTimer()
             
             questionsAsked += 1
         }
@@ -161,6 +161,10 @@ class ViewController: UIViewController {
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
+            
+            timer.invalidate()
+            seconds = 60
+            timerLabel.text = String(seconds)
             
             if checkAnswer() == true {
                 print("correct")
@@ -187,6 +191,38 @@ class ViewController: UIViewController {
             return false
         }
     }
-
+    
+    var timer = Timer()
+    var seconds = 60
+    
+    func countdown() {
+        if seconds > 0 {
+            seconds -= 1
+            timerLabel.text = String(seconds)
+        } else {
+            timer.invalidate()
+            seconds = 60
+            timerLabel.text = String(seconds)
+            
+            if checkAnswer() == true {
+                print("correct")
+                nextRoundButton.setImage(successImage, for: UIControlState.normal)
+                shakeButton.setTitle("Correct! Click each battle for info!", for: UIControlState.normal)
+                score += 1
+            } else {
+                print("nope")
+                nextRoundButton.setImage(failImage, for: UIControlState.normal)
+                shakeButton.setTitle("Negative. Click each battle for info!", for: UIControlState.normal)
+            }
+            
+            print(questionsAsked)
+            nextRoundButton.isHidden = false
+            timerLabel.isHidden = true
+        }
+    }
+    
+    func startTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ViewController.countdown)), userInfo: nil, repeats: true)
+    }
 }
 
