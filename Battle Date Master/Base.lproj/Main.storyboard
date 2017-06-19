@@ -179,7 +179,8 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWH-gI-WXp">
-                                <rect key="frame" x="46" y="611" width="283" height="31"/>
+                                <rect key="frame" x="28" y="611" width="319" height="41"/>
+                                <color key="tintColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Shake Button and Message"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Jv-aS-nMu">
@@ -195,9 +196,10 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbg-ai-xJb">
-                                <rect key="frame" x="165.5" y="568" width="44" height="19"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="154.5" y="568" width="66" height="19"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -209,11 +211,11 @@
                             <constraint firstItem="8Fv-n0-3yM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RpO-yC-gD6"/>
                             <constraint firstItem="Zbg-ai-xJb" firstAttribute="top" secondItem="8Fv-n0-3yM" secondAttribute="bottom" constant="10" id="YMf-yp-SH2"/>
                             <constraint firstItem="4Jv-aS-nMu" firstAttribute="top" secondItem="8Fv-n0-3yM" secondAttribute="bottom" constant="10" id="aD8-n9-O7b"/>
-                            <constraint firstItem="oWH-gI-WXp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="bur-Io-iQr"/>
+                            <constraint firstItem="oWH-gI-WXp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="bur-Io-iQr"/>
                             <constraint firstItem="8Fv-n0-3yM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="c70-RB-OJB"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Zbg-ai-xJb" secondAttribute="bottom" constant="80" id="hcm-rg-Sgx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oWH-gI-WXp" secondAttribute="trailing" constant="30" id="jhx-ce-KwJ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oWH-gI-WXp" secondAttribute="bottom" constant="25" id="vBN-3S-Iwi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oWH-gI-WXp" secondAttribute="trailing" constant="12" id="jhx-ce-KwJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oWH-gI-WXp" secondAttribute="bottom" constant="15" id="vBN-3S-Iwi"/>
                             <constraint firstItem="Zbg-ai-xJb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vyS-RS-VS9"/>
                         </constraints>
                     </view>

@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     let successImage = #imageLiteral(resourceName: "next_round_success")
     let failImage = #imageLiteral(resourceName: "next_round_fail")
     var questionsAsked = 0
+    var score = 0
     
     var battle1 = currentBattles[0]
     var battle2 = currentBattles[1]
@@ -140,6 +141,7 @@ class ViewController: UIViewController {
             battle4 = currentBattles[3]
             
             setLabelText()
+            shakeButton.setTitle("Shake your phone to submit!", for: UIControlState.normal)
             print(currentBattles)
 
 
@@ -159,16 +161,31 @@ class ViewController: UIViewController {
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            shakeButton.setTitle("maybe!!", for: UIControlState.normal)
+            
+            if checkAnswer() == true {
+                print("correct")
+                nextRoundButton.setImage(successImage, for: UIControlState.normal)
+                shakeButton.setTitle("Correct! Click each battle for info!", for: UIControlState.normal)
+                score += 1
+            } else {
+                print("nope")
+                nextRoundButton.setImage(failImage, for: UIControlState.normal)
+                shakeButton.setTitle("Negative. Click each battle for info!", for: UIControlState.normal)
+            }
             
             print(questionsAsked)
             nextRoundButton.isHidden = false
-            nextRoundButton.setImage(successImage, for: UIControlState.normal)
+            timerLabel.isHidden = true
         }
     }
     
-    func checkAnswer() {
+    func checkAnswer() -> Bool {
         //TODO: add logic, probably just if statement?
+        if battle1.year <= battle2.year && battle2.year <= battle3.year && battle3.year <= battle4.year {
+            return true
+        } else {
+            return false
+        }
     }
 
 }
