@@ -13,6 +13,7 @@ import UIKit
 //TODO: implement apple icon
 
 
+var currentBattles = chooseBattlesForRound()
 
 
 class ViewController: UIViewController {
@@ -30,6 +31,12 @@ class ViewController: UIViewController {
     let successImage = #imageLiteral(resourceName: "next_round_success")
     let failImage = #imageLiteral(resourceName: "next_round_fail")
     var questionsAsked = 0
+    
+    var battle1 = currentBattles[0]
+    var battle2 = currentBattles[1]
+    var battle3 = currentBattles[2]
+    var battle4 = currentBattles[3]
+    
     
 
     override func viewDidLoad() {
@@ -58,21 +65,13 @@ class ViewController: UIViewController {
     // Starts a game of 6 rounds
     
     @IBAction func startRound() {
-        chooseBattlesForRound()
         
+        label1.text = battle1.description
+        label2.text = battle2.description
+        label3.text = battle3.description
+        label4.text = battle4.description
         
-        let battle1 = roundBattles[0].description
-        let battle2 = roundBattles[1].description
-        let battle3 = roundBattles[2].description
-        let battle4 = roundBattles[3].description
-        
-        label1.text = battle1
-        label2.text = battle2
-        label3.text = battle3
-        label4.text = battle4
-        
-        print(battleIndex)
-        print(roundBattles)
+        print(currentBattles)
         
         nextRoundButton.isHidden = true
         timerLabel.isHidden = false

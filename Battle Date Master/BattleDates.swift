@@ -74,13 +74,12 @@ var allBattles: [BattleDate] = [
 ]
 
 var roundBattles = [BattleDate]() // will contain the 4 random battles for each round
-var roundBattleYears = [Int]()
 var battleIndex = Array(0...(allBattles.count - 1))
 var roundBattlesIndex = [Int]()
 
 // This function selects 4 random and non-repeating battles for each round.
 
-func chooseBattlesForRound() {
+func chooseBattlesForRound() -> [BattleDate] {
     
     for _ in 1...4 {
         let randomNum = GKRandomSource.sharedRandom().nextInt(upperBound: battleIndex.count)
@@ -92,11 +91,10 @@ func chooseBattlesForRound() {
     
     while i < roundBattlesIndex.count {
         roundBattles.append(allBattles[roundBattlesIndex[i]])
-        roundBattleYears.append(allBattles[roundBattlesIndex[i]].year)
         i += 1
     }
     
-    roundBattleYears.sort()
+    return roundBattles
 }
 
 func resetBattlesForNextRound() {
