@@ -23,8 +23,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var nextRoundButton: UIButton!
     @IBOutlet weak var shakeButton: UIButton!
     
+    // variables and constants used for gameplay
+    
     let successImage = #imageLiteral(resourceName: "next_round_success")
     let failImage = #imageLiteral(resourceName: "next_round_fail")
+    var questionsAsked = 0
     
 
     override func viewDidLoad() {
@@ -74,15 +77,27 @@ class ViewController: UIViewController {
         shakeButton.isHidden = false
     }
     
-    // shaking the device checks the battle order!
+    // shaking the device checks the battle order, and resets battles for next round.
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             shakeButton.setTitle("maybe!!", for: UIControlState.normal) //TOFIX:
             resetBattlesForNextRound()
+            checkRounds()
+            
             print(roundBattles)
+            print(questionsAsked)
             nextRoundButton.isHidden = false
             nextRoundButton.setImage(successImage, for: UIControlState.normal)
+        }
+    }
+    
+    func checkRounds() {
+        if questionsAsked == 6 {
+            //TODO: add display score screens, etc.
+            questionsAsked = 0
+        } else {
+            questionsAsked += 1
         }
     }
 
