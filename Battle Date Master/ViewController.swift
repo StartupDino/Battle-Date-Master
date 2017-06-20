@@ -140,10 +140,10 @@ class ViewController: UIViewController {
     // sets up an initial welcome screen!
     
     func showWelcomeScreen() {
-        label1.text = "Ready to"
-        label2.text = "put these"
-        label3.text = "historic battles"
-        label4.text = "in order??"
+        label1.text = "Order battles from oldest..."
+        label2.text = "...."
+        label3.text = "...."
+        label4.text = "to newest! Ready?"
         nextRoundButton.setTitle("Start the Round", for: UIControlState.normal)
         timerLabel.isHidden = true
         shakeButton.isHidden = true
