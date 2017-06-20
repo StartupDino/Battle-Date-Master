@@ -189,12 +189,20 @@ class ViewController: UIViewController {
         shakeButton.isHidden = false
     }
     
+    // Passes data to different views, and also selects WHICH subview to pull up!
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if whichView == "scoreboard" {
             let scoreView = segue.destination as! ScoreController
             scoreView.text = finalScore
         }
     }
+    
+    
+    // clicking each battle pulls up webview!
+    
+    
+    
     
     
     // shaking the device checks the battle order, and resets battles for next round.

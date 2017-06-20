@@ -7,13 +7,29 @@
 //
 
 import UIKit
+import WebKit
+
 
 class LearnController: UIViewController {
 
+    @IBOutlet weak var theWebView: UIWebView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let url: URL = URL(string: "http://doyouevenblog.com")!
+        let request: URLRequest = URLRequest(url: url)
+        
+        theWebView.loadRequest(request)
+        
+        
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
