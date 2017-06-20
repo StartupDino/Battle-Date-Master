@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		472523201EF9441B00FC05E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 476DD2F71EF1BD5B00151996 /* Assets.xcassets */; };
 		472523221EF944F000FC05E8 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 472523211EF944F000FC05E8 /* LaunchImage.png */; };
+		47255E831EF9679A00A9A4D1 /* ScoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47255E821EF9679A00A9A4D1 /* ScoreController.swift */; };
 		47613F181EF1CC3D004A252A /* BattleDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47613F171EF1CC3D004A252A /* BattleDates.swift */; };
 		476DD2F11EF1BD5B00151996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DD2F01EF1BD5B00151996 /* AppDelegate.swift */; };
 		476DD2F31EF1BD5B00151996 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DD2F21EF1BD5B00151996 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		472523211EF944F000FC05E8 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaunchImage.png; path = Assets.xcassets/LaunchImage.png; sourceTree = "<group>"; };
+		47255E821EF9679A00A9A4D1 /* ScoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreController.swift; sourceTree = "<group>"; };
 		47613F171EF1CC3D004A252A /* BattleDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleDates.swift; sourceTree = "<group>"; };
 		476DD2ED1EF1BD5B00151996 /* Battle Date Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Battle Date Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		476DD2F01EF1BD5B00151996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				476DD2F01EF1BD5B00151996 /* AppDelegate.swift */,
 				476DD2F21EF1BD5B00151996 /* ViewController.swift */,
+				47255E821EF9679A00A9A4D1 /* ScoreController.swift */,
 				47613F171EF1CC3D004A252A /* BattleDates.swift */,
 				476DD2F41EF1BD5B00151996 /* Main.storyboard */,
 				476DD2F71EF1BD5B00151996 /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47255E831EF9679A00A9A4D1 /* ScoreController.swift in Sources */,
 				476DD2F31EF1BD5B00151996 /* ViewController.swift in Sources */,
 				476DD2F11EF1BD5B00151996 /* AppDelegate.swift in Sources */,
 				47613F181EF1CC3D004A252A /* BattleDates.swift in Sources */,
