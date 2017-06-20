@@ -10,6 +10,8 @@ import UIKit
 
 var currentBattles = chooseBattlesForRound()
 var whichView = "" // chooses which UIViewController subclass to pull up
+var finalScore = "" // for displaying theh final score on ScoreController
+
 
 
 
@@ -130,6 +132,10 @@ class ViewController: UIViewController {
         if questionsAsked == 6 {
             //TODO: add logic for score screen
             questionsAsked = 0
+            whichView = "scoreboard"
+            finalScore = "\(score) out of 6"
+            
+            self.performSegue(withIdentifier: "gameOverSegue", sender: sender)
             
             
         } else {
@@ -151,10 +157,14 @@ class ViewController: UIViewController {
         nextRoundButton.isHidden = true
         timerLabel.isHidden = false
         shakeButton.isHidden = false
-
-        
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if whichView == "scoreboard" {
+            let scoreView = segue.destination as! ScoreController
+            scoreView.text = finalScore
+        }
+    }
     
     
     // shaking the device checks the battle order, and resets battles for next round.

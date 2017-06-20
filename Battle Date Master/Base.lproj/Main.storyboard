@@ -296,6 +296,9 @@
                             <constraint firstItem="sCD-V5-EJ1" firstAttribute="leading" secondItem="uMs-lw-Rsv" secondAttribute="leadingMargin" constant="20" id="s0r-09-myW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="finalScore" destination="i6L-vS-Vj9" id="LzU-0S-qfy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFH-X8-eMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
