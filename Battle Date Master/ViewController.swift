@@ -125,15 +125,12 @@ class ViewController: UIViewController {
     
     // Starts a new round with 4 battles, OR displays score screen
     
-    @IBAction func startRound(_ sender: Any) {
+    @IBAction func startRound() {
         
         if questionsAsked == 6 {
             //TODO: add logic for score screen
             questionsAsked = 0
-            whichView = "score"
-            
-            self.performSegue(withIdentifier: "gameOverSegue", sender: sender)
-            
+        
             
         } else {
             currentBattles = chooseBattlesForRound()
@@ -154,20 +151,6 @@ class ViewController: UIViewController {
         nextRoundButton.isHidden = true
         timerLabel.isHidden = false
         shakeButton.isHidden = false
-    }
-    
-    // preps for the segues
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if whichView == "score" {
-            let scoreView = segue.destination as! ScoreController
-            scoreView.text = String(score)
-        } else if whichView == "learn" {
-//            let learnView = segue.destination as! LearnController
-            
-            //TODO: add link stuff here.
-            
-        }
     }
     
     
