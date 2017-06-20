@@ -282,6 +282,9 @@
                                     <constraint firstAttribute="width" constant="174" id="wmk-T7-Rl6"/>
                                 </constraints>
                                 <state key="normal" image="play_again"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="QSA-4S-bWg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.29411764709999999" green="0.30588235289999999" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
