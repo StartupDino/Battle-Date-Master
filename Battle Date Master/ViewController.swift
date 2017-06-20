@@ -125,12 +125,12 @@ class ViewController: UIViewController {
     
     // Starts a new round with 4 battles, OR displays score screen
     
-    @IBAction func startRound() {
-        
+    
+    @IBAction func startRound(_ sender: Any) {
         if questionsAsked == 6 {
             //TODO: add logic for score screen
             questionsAsked = 0
-        
+            
             
         } else {
             currentBattles = chooseBattlesForRound()
@@ -142,8 +142,8 @@ class ViewController: UIViewController {
             setLabelText()
             shakeButton.setTitle("Shake your phone to submit!", for: UIControlState.normal)
             print(currentBattles)
-
-
+            
+            
             startTimer()
             questionsAsked += 1
         }
@@ -151,8 +151,9 @@ class ViewController: UIViewController {
         nextRoundButton.isHidden = true
         timerLabel.isHidden = false
         shakeButton.isHidden = false
+
+        
     }
-    
     
     
     
