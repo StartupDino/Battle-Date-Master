@@ -24,6 +24,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var nextRoundButton: UIButton!
     @IBOutlet weak var shakeButton: UIButton!
+    @IBOutlet weak var firstButtonDown: UIButton!
+    @IBOutlet weak var secondButtonUp: UIButton!
+    @IBOutlet weak var secondButtonDown: UIButton!
+    @IBOutlet weak var thirdButtonUp: UIButton!
+    @IBOutlet weak var thirdButtonDown: UIButton!
+    @IBOutlet weak var fourthButtonUp: UIButton!
     
     // variables and constants used for gameplay
     
@@ -42,6 +48,24 @@ class ViewController: UIViewController {
         label2.text = battle2.description
         label3.text = battle3.description
         label4.text = battle4.description
+    }
+    
+    func hideMoveButtons() {
+        firstButtonDown.isHidden = true
+        secondButtonUp.isHidden = true
+        secondButtonDown.isHidden = true
+        thirdButtonUp.isHidden = true
+        thirdButtonDown.isHidden = true
+        fourthButtonUp.isHidden = true
+    }
+    
+    func showMoveButtons() {
+        firstButtonDown.isHidden = false
+        secondButtonUp.isHidden = false
+        secondButtonDown.isHidden = false
+        thirdButtonUp.isHidden = false
+        thirdButtonDown.isHidden = false
+        fourthButtonUp.isHidden = false
     }
     
     // adding functionality to up and down buttons
@@ -123,12 +147,18 @@ class ViewController: UIViewController {
         nextRoundButton.setTitle("Start the Round", for: UIControlState.normal)
         timerLabel.isHidden = true
         shakeButton.isHidden = true
+        
+        hideMoveButtons()
+        
     }
     
     // Starts a new round with 4 battles, OR displays score screen
     
     
     @IBAction func startRound(_ sender: Any) {
+        
+        showMoveButtons()
+        
         if questionsAsked == 6 {
             //TODO: add logic for score screen
             questionsAsked = 0

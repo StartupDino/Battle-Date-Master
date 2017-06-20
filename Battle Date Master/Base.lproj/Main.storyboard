@@ -219,12 +219,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="firstButtonDown" destination="lTf-Zr-8lz" id="cTV-LF-CHf"/>
+                        <outlet property="fourthButtonUp" destination="nas-fn-cdj" id="mk8-DP-f8Y"/>
                         <outlet property="label1" destination="gpi-fW-AY8" id="Kca-JH-MC9"/>
                         <outlet property="label2" destination="FLX-LW-W06" id="67i-8e-aQg"/>
                         <outlet property="label3" destination="tKC-q2-TW9" id="GAh-1s-5nZ"/>
                         <outlet property="label4" destination="lsn-J5-Cvl" id="XRk-VM-6Ng"/>
                         <outlet property="nextRoundButton" destination="4Jv-aS-nMu" id="hno-9Q-2WH"/>
+                        <outlet property="secondButtonDown" destination="HR7-ZQ-0sZ" id="RW3-7G-WIN"/>
+                        <outlet property="secondButtonUp" destination="OgO-f1-kNK" id="LJH-Ag-mWK"/>
                         <outlet property="shakeButton" destination="oWH-gI-WXp" id="sYe-bT-L6v"/>
+                        <outlet property="thirdButtonDown" destination="up9-tP-GuZ" id="fgo-kY-zkg"/>
+                        <outlet property="thirdButtonUp" destination="NHW-3L-yBd" id="7i4-p3-H3L"/>
                         <outlet property="timerLabel" destination="Zbg-ai-xJb" id="juB-Hh-RWm"/>
                         <segue destination="UF8-jd-K3I" kind="presentation" identifier="gameOverSegue" id="lcb-CS-fon"/>
                     </connections>
