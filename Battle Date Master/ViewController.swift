@@ -24,12 +24,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var nextRoundButton: UIButton!
     @IBOutlet weak var shakeButton: UIButton!
+    
     @IBOutlet weak var firstButtonDown: UIButton!
     @IBOutlet weak var secondButtonUp: UIButton!
     @IBOutlet weak var secondButtonDown: UIButton!
     @IBOutlet weak var thirdButtonUp: UIButton!
     @IBOutlet weak var thirdButtonDown: UIButton!
     @IBOutlet weak var fourthButtonUp: UIButton!
+    
+    @IBOutlet weak var learnButton1: UIButton!
+    @IBOutlet weak var learnButton2: UIButton!
+    @IBOutlet weak var learnButton3: UIButton!
+    @IBOutlet weak var learnButton4: UIButton!
+    
     
     // variables and constants used for gameplay
     
@@ -66,6 +73,20 @@ class ViewController: UIViewController {
         thirdButtonUp.isHidden = false
         thirdButtonDown.isHidden = false
         fourthButtonUp.isHidden = false
+    }
+    
+    func hideLearnButtons() {
+        learnButton1.isHidden = true
+        learnButton2.isHidden = true
+        learnButton3.isHidden = true
+        learnButton4.isHidden = true
+    }
+    
+    func showLearnButtons() {
+        learnButton1.isHidden = false
+        learnButton2.isHidden = false
+        learnButton3.isHidden = false
+        learnButton4.isHidden = false
     }
     
     // adding functionality to up and down buttons
