@@ -219,7 +219,8 @@ class ViewController: UIViewController {
             let scoreView = segue.destination as! ScoreController
             scoreView.text = finalScore
         } else if whichView == "learn" {
-            //TODO: add stuff here
+            let learnView = segue.destination as! LearnController
+            learnView.learnUrl = learnUrl
         }
     }
     
@@ -227,27 +228,26 @@ class ViewController: UIViewController {
     // clicking each battle pulls up webview!
     
     @IBAction func learnMoreButton1(_ sender: Any) {
-        //TODO: add link code here
+        learnUrl = battle1.link
         whichView = "learn"
-//        learnUrl = //TODO: add link here
         self.performSegue(withIdentifier: "learnSegueOne", sender: sender)
     }
     
     @IBAction func learnMoreButton2(_ sender: Any) {
+        learnUrl = battle2.link
         whichView = "learn"
-        
         self.performSegue(withIdentifier: "learnSegueTwo", sender: sender)
     }
     
     @IBAction func learnMoreButton3(_ sender: Any) {
+        learnUrl = battle3.link
         whichView = "learn"
-        
         self.performSegue(withIdentifier: "learnSegueThree", sender: sender)
     }
     
     @IBAction func learnMoreButton4(_ sender: Any) {
+        learnUrl = battle4.link
         whichView = "learn"
-        
         self.performSegue(withIdentifier: "learnSegueFour", sender: sender)
     }
     

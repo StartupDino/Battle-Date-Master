@@ -14,6 +14,8 @@ class LearnController: UIViewController {
 
     @IBOutlet weak var theWebView: UIWebView!
     
+    var learnUrl: String = ""
+    
     
     
     override func viewDidLoad() {
@@ -21,15 +23,10 @@ class LearnController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        let url: URL = URL(string: "https://google.com")!
+        let url: URL = URL(string: learnUrl)!
         let request: URLRequest = URLRequest(url: url)
         
         theWebView.loadRequest(request)
-        
-        
-        
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +34,9 @@ class LearnController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func dismiss(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
