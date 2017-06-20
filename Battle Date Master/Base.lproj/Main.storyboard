@@ -227,11 +227,30 @@
                         <outlet property="nextRoundButton" destination="4Jv-aS-nMu" id="hno-9Q-2WH"/>
                         <outlet property="shakeButton" destination="oWH-gI-WXp" id="sYe-bT-L6v"/>
                         <outlet property="timerLabel" destination="Zbg-ai-xJb" id="juB-Hh-RWm"/>
+                        <segue destination="UF8-jd-K3I" kind="presentation" identifier="gameOverSegue" id="lcb-CS-fon"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-66.400000000000006" y="21.139430284857571"/>
+            <point key="canvasLocation" x="-2" y="27"/>
+        </scene>
+        <!--Learn Controller-->
+        <scene sceneID="ydq-by-tU3">
+            <objects>
+                <viewController id="Bva-KI-o2z" customClass="LearnController" customModule="Battle_Date_Master" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Ub-el-T4F"/>
+                        <viewControllerLayoutGuide type="bottom" id="piX-o3-5zc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GlA-RS-XeU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oHL-Xn-rKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2" y="697"/>
         </scene>
         <!--Score Controller-->
         <scene sceneID="k1R-VZ-Jzz">

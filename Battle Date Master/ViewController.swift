@@ -125,7 +125,7 @@ class ViewController: UIViewController {
     
     // Starts a new round with 4 battles, OR displays score screen
     
-    @IBAction func startRound() {
+    @IBAction func startRound(_ sender: Any) {
         
         if questionsAsked == 6 {
             //TODO: add logic for score screen
@@ -161,9 +161,10 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if whichView == "score" {
             let scoreView = segue.destination as! ScoreController
-            scoreView.text = score
+            scoreView.text = String(score)
         } else if whichView == "learn" {
-            let learnView = segue.destination as! //TODO: add learnmore controller here.
+//            let learnView = segue.destination as! LearnController
+            
             //TODO: add link stuff here.
             
         }

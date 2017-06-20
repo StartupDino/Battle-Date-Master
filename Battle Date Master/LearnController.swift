@@ -1,5 +1,5 @@
 //
-//  ScoreController.swift
+//  LearnController.swift
 //  Battle Date Master
 //
 //  Created by Pete McPherson on 6/20/17.
@@ -8,9 +8,7 @@
 
 import UIKit
 
-class ScoreController: UIViewController {
-    
-    var text: String = ""
+class LearnController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
