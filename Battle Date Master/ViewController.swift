@@ -11,6 +11,8 @@ import UIKit
 var currentBattles = chooseBattlesForRound()
 var whichView = "" // chooses which UIViewController subclass to pull up
 var finalScore = "" // for displaying theh final score on ScoreController
+var learnUrl = "" // passing the URLs for each battle
+
 
 
 
@@ -216,14 +218,38 @@ class ViewController: UIViewController {
         if whichView == "scoreboard" {
             let scoreView = segue.destination as! ScoreController
             scoreView.text = finalScore
+        } else if whichView == "learn" {
+            //TODO: add stuff here
         }
     }
     
     
     // clicking each battle pulls up webview!
     
+    @IBAction func learnMoreButton1(_ sender: Any) {
+        //TODO: add link code here
+        whichView = "learn"
+//        learnUrl = //TODO: add link here
+        self.performSegue(withIdentifier: "learnSegueOne", sender: sender)
+    }
     
+    @IBAction func learnMoreButton2(_ sender: Any) {
+        whichView = "learn"
+        
+        self.performSegue(withIdentifier: "learnSegueTwo", sender: sender)
+    }
     
+    @IBAction func learnMoreButton3(_ sender: Any) {
+        whichView = "learn"
+        
+        self.performSegue(withIdentifier: "learnSegueThree", sender: sender)
+    }
+    
+    @IBAction func learnMoreButton4(_ sender: Any) {
+        whichView = "learn"
+        
+        self.performSegue(withIdentifier: "learnSegueFour", sender: sender)
+    }
     
     
     // shaking the device checks the battle order, and resets battles for next round.

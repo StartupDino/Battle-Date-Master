@@ -21,7 +21,7 @@ class LearnController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        let url: URL = URL(string: "http://doyouevenblog.com")!
+        let url: URL = URL(string: "https://google.com")!
         let request: URLRequest = URLRequest(url: url)
         
         theWebView.loadRequest(request)

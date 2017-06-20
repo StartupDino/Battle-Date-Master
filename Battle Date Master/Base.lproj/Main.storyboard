@@ -49,6 +49,10 @@
                                                 <rect key="frame" x="60" y="92" width="183" height="30"/>
                                                 <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Learn More"/>
+                                                <connections>
+                                                    <action selector="learnMoreButton1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ma-zP-DAq"/>
+                                                    <segue destination="Bva-KI-o2z" kind="presentation" identifier="learnSegueOne" id="U2a-1J-9cj"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -98,6 +102,10 @@
                                                 <rect key="frame" x="60" y="92" width="183" height="30"/>
                                                 <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Learn More"/>
+                                                <connections>
+                                                    <action selector="learnMoreButton2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5J9-vl-oYO"/>
+                                                    <segue destination="Bva-KI-o2z" kind="presentation" identifier="learnSegueTwo" id="ToK-SU-9b9"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -150,6 +158,10 @@
                                                 <rect key="frame" x="60" y="92" width="183" height="30"/>
                                                 <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Learn More"/>
+                                                <connections>
+                                                    <action selector="learnMoreButton3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cBp-2H-aFf"/>
+                                                    <segue destination="Bva-KI-o2z" kind="presentation" identifier="learnSegueThree" id="bEx-kN-vE6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -192,6 +204,10 @@
                                                 <rect key="frame" x="60" y="92" width="183" height="30"/>
                                                 <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Learn More"/>
+                                                <connections>
+                                                    <action selector="learnMoreButton4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I3d-g7-snG"/>
+                                                    <segue destination="Bva-KI-o2z" kind="presentation" identifier="learnSegueFour" id="GoE-sE-jy9"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -382,4 +398,7 @@
         <image name="up_full" width="158" height="457"/>
         <image name="up_half" width="158" height="229"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="GoE-sE-jy9"/>
+    </inferredMetricsTieBreakers>
 </document>
