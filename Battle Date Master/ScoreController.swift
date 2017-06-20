@@ -10,17 +10,15 @@ import UIKit
 
 class ScoreController: UIViewController {
     
-    var text: String = ""
+    var text: String = "" // this variable is populated from the ViewController data passing through
     
     @IBOutlet weak var finalScore: UILabel!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         finalScore.text = text
         
-
         // Do any additional setup after loading the view.
     }
 

@@ -8,14 +8,10 @@
 
 import UIKit
 
-var currentBattles = chooseBattlesForRound()
+var currentBattles = chooseBattlesForRound() // creating a "shortcut" for 4 random battles from dataset
 var whichView = "" // chooses which UIViewController subclass to pull up
-var finalScore = "" // for displaying theh final score on ScoreController
-var learnUrl = "" // passing the URLs for each battle
-
-
-
-
+var finalScore = "" // for passing the final score to ScoreController
+var learnUrl = "" // for passing the URLs for each battle to LearnController
 
 class ViewController: UIViewController {
 
@@ -58,6 +54,8 @@ class ViewController: UIViewController {
         label3.text = battle3.description
         label4.text = battle4.description
     }
+    
+    // "shortcut" functions for hiding/showing move buttons and learn more buttons
     
     func hideMoveButtons() {
         firstButtonDown.isHidden = true
@@ -147,7 +145,6 @@ class ViewController: UIViewController {
         label3.text = battle3.description
         label4.text = battle4.description
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -172,25 +169,23 @@ class ViewController: UIViewController {
         shakeButton.isHidden = true
         
         hideMoveButtons()
-        
+        hideLearnButtons()
     }
     
     // Starts a new round with 4 battles, OR displays score screen
     
-    
     @IBAction func startRound(_ sender: Any) {
         
         showMoveButtons()
+        hideLearnButtons()
         
         if questionsAsked == 6 {
-            //TODO: add logic for score screen
+            
             questionsAsked = 0
             whichView = "scoreboard"
             finalScore = "\(score) out of 6"
             
             self.performSegue(withIdentifier: "gameOverSegue", sender: sender)
-            
-            
         } else {
             currentBattles = chooseBattlesForRound()
             battle1 = currentBattles[0]
@@ -200,8 +195,6 @@ class ViewController: UIViewController {
             
             setLabelText()
             shakeButton.setTitle("Shake your phone to submit!", for: UIControlState.normal)
-            print(currentBattles)
-            
             
             startTimer()
             questionsAsked += 1
@@ -224,8 +217,7 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    // clicking each battle pulls up webview!
+    // clicking learn more buttons pulls up webview!
     
     @IBAction func learnMoreButton1(_ sender: Any) {
         learnUrl = battle1.link
@@ -257,26 +249,28 @@ class ViewController: UIViewController {
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             
+            // stops and resets timer
+            
             timer.invalidate()
             seconds = 60
             timerLabel.text = String(seconds)
             
             if checkAnswer() == true {
-                print("correct")
                 nextRoundButton.setImage(successImage, for: UIControlState.normal)
                 shakeButton.setTitle("Correct! Click each battle for info!", for: UIControlState.normal)
                 score += 1
             } else {
-                print("nope")
                 nextRoundButton.setImage(failImage, for: UIControlState.normal)
                 shakeButton.setTitle("Negative. Click each battle for info!", for: UIControlState.normal)
             }
             
-            print(questionsAsked)
+            showLearnButtons()
             nextRoundButton.isHidden = false
             timerLabel.isHidden = true
         }
     }
+    
+    // checks order of battles submitted against proper years and returns true or false
     
     func checkAnswer() -> Bool {
         if battle1.year <= battle2.year && battle2.year <= battle3.year && battle3.year <= battle4.year {
@@ -285,6 +279,8 @@ class ViewController: UIViewController {
             return false
         }
     }
+    
+    // 60 second timer begins with each new round
     
     var timer = Timer()
     var seconds = 60

@@ -14,9 +14,7 @@ class LearnController: UIViewController {
 
     @IBOutlet weak var theWebView: UIWebView!
     
-    var learnUrl: String = ""
-    
-    
+    var learnUrl: String = "" // the URL is passed through from ViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +22,7 @@ class LearnController: UIViewController {
         // Do any additional setup after loading the view.
         
         let url: URL = URL(string: learnUrl)!
-        let request: URLRequest = URLRequest(url: url)
-        
+        let request: URLRequest = URLRequest(url: url)        
         theWebView.loadRequest(request)
     }
 

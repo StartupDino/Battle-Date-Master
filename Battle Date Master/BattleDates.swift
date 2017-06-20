@@ -75,8 +75,6 @@ var allBattles: [BattleDate] = [
     BattleDate(description: "Battle of Moscow", year: 1942, link: "https://en.wikipedia.org/wiki/Battle_of_Moscow")
 ]
 
-
-
 // This function selects 4 random and non-repeating battles for each round.
 
 func chooseBattlesForRound() -> [BattleDate] {
