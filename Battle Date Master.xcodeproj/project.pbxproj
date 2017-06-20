@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		472523201EF9441B00FC05E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 476DD2F71EF1BD5B00151996 /* Assets.xcassets */; };
+		472523221EF944F000FC05E8 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 472523211EF944F000FC05E8 /* LaunchImage.png */; };
 		47613F181EF1CC3D004A252A /* BattleDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47613F171EF1CC3D004A252A /* BattleDates.swift */; };
 		476DD2F11EF1BD5B00151996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DD2F01EF1BD5B00151996 /* AppDelegate.swift */; };
 		476DD2F31EF1BD5B00151996 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DD2F21EF1BD5B00151996 /* ViewController.swift */; };
@@ -15,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		472523211EF944F000FC05E8 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaunchImage.png; path = Assets.xcassets/LaunchImage.png; sourceTree = "<group>"; };
 		47613F171EF1CC3D004A252A /* BattleDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleDates.swift; sourceTree = "<group>"; };
 		476DD2ED1EF1BD5B00151996 /* Battle Date Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Battle Date Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		476DD2F01EF1BD5B00151996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 				47613F171EF1CC3D004A252A /* BattleDates.swift */,
 				476DD2F41EF1BD5B00151996 /* Main.storyboard */,
 				476DD2F71EF1BD5B00151996 /* Assets.xcassets */,
+				472523211EF944F000FC05E8 /* LaunchImage.png */,
 				476DD2F91EF1BD5B00151996 /* LaunchScreen.storyboard */,
 				476DD2FC1EF1BD5B00151996 /* Info.plist */,
 			);
@@ -126,7 +130,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				472523221EF944F000FC05E8 /* LaunchImage.png in Resources */,
 				476DD2FB1EF1BD5B00151996 /* LaunchScreen.storyboard in Resources */,
+				472523201EF9441B00FC05E8 /* Assets.xcassets in Resources */,
 				476DD2F61EF1BD5B00151996 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,10 +269,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = A2T9Q78M27;
 				INFOPLIST_FILE = "Battle Date Master/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = LaunchImage;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flag7.Battle-Date-Master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -277,10 +283,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = A2T9Q78M27;
 				INFOPLIST_FILE = "Battle Date Master/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = LaunchImage;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flag7.Battle-Date-Master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
