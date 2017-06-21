@@ -43,10 +43,14 @@ class ViewController: UIViewController {
     var questionsAsked = 0
     var score = 0
     
+    // adding "shortcuts" for round battles
+    
     var battle1 = currentBattles[0]
     var battle2 = currentBattles[1]
     var battle3 = currentBattles[2]
     var battle4 = currentBattles[3]
+    
+    // updates the bale text w/ battle info for each new round
     
     func setLabelText() {
         label1.text = battle1.description
